@@ -1,0 +1,8 @@
+{
+    "search.useGlobalIgnoreFiles": false,
+    "search.useParentIgnoreFiles": false,
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact"
+    },
+    "emmet.preferences": {}
+}
