@@ -56,7 +56,7 @@ export default async function handler(req, res) {
 
         await prisma.tweet.create({
             data: {
-                content: faker.animal.cow(),
+                content: `My favourite cow is ${faker.animal.cow()}`,
                 author: {
                     connect: { id: user.id },
                 },
