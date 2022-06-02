@@ -1,10 +1,10 @@
 import timeago from "lib/timeago"
 
-export default function Tweets({ tweet }) {
+export default function Tweet({ tweet }) {
     return (
         <p>
             {timeago.format(new Date(tweet.createdAt))} {": "}
-            {tweet.content} {" from "} {tweet.author.email}
+            {tweet.content} {" from "} {tweet.author.name}
         </p>
     )
 }
