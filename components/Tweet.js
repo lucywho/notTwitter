@@ -7,22 +7,36 @@ export default function Tweet({ tweet }) {
     }
 
     if (!tweet.author.image) {
-        tweet.author.image = `/marshmallow.png`
+        tweet.author.image = `/default.jpg`
     }
 
     return (
-        <p>
-            {tweet.author.image && (
-                <Image
-                    className="w-64 h-64 rounded-full"
-                    src={tweet.author.image}
-                    alt={tweet.author.name}
-                    width="40"
-                    height="40"
-                />
-            )}
-            {timeago.format(new Date(tweet.createdAt))} {": "}
-            {tweet.content} {" from "} {tweet.author.name}
-        </p>
+        <div className="ml-10 mr-10 mb-1">
+            <div className="flex items-center content-center bg-gradient-to-r from-fuchsia-300 to-blue-300 rounded-lg p-1">
+                <p className="mr-2 pt-1 pl-1 ">
+                    {tweet.author.image && (
+                        <Image
+                            className="w-64 h-64 rounded-full"
+                            src={tweet.author.image}
+                            alt={tweet.author.name}
+                            width="65vw"
+                            height="65vw"
+                        />
+                    )}
+                </p>
+                <div className="container">
+                    <div className="flex flex-row items-center">
+                        <p className=" mr-2">
+                            {tweet.author.name}
+                            {": "}
+                        </p>
+                        <p className="mr-2 text-gray-700 hover:underline">
+                            {timeago.format(new Date(tweet.createdAt))}
+                        </p>
+                    </div>
+                    <p className="font-bold">{tweet.content}</p>
+                </div>
+            </div>
+        </div>
     )
 }

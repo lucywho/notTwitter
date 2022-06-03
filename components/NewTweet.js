@@ -30,10 +30,10 @@ export default function NewTweet() {
                 router.reload(window.location.pathname)
             }}
         >
-            <div className="flex">
+            <div className="flex ml-10 mr-10">
                 <div className="flex-1 px-1 pt-2 mt-2 mr-1 ml-1">
                     <textarea
-                        className="border p-4 w-full text-lg font-medium bg-transparent outline-none color-primary "
+                        className="border-2 border-fuchsia-300 rounded-md p-4 w-full text-lg font-medium bg-fuchsia-100"
                         rows={2}
                         cols={50}
                         placeholder="What's happening?"
@@ -44,8 +44,8 @@ export default function NewTweet() {
             </div>
 
             <div className="flex">
-                <div className="flex-1 mb-5">
-                    <button className="border float-right px-8 py-2 mt-0 mr-2 font-bold rounded-full bg-black text-white border-black hover:bg-gray-700 hover:border-gray-700">
+                <div className="flex-1 m-10 mt-5">
+                    <button className="border float-right px-8 py-2 mt-0 mr-2 font-bold rounded-full bg-blue-900 text-white border-blue-900 hover:bg-fuchsia-700 hover:border-fuchsia-700">
                         Tweet
                     </button>
                 </div>
