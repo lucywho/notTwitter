@@ -12,11 +12,12 @@ export default async function handler(req, res) {
             },
         })
 
-        if (userExists.length) {
-            return res.status(409).json
-        }
+        console.log("userExists: ", userExists)
 
-        if (!userExists.length) {
+        if (userExists.length) {
+            let error = "user exists"
+            return res.status(409).json(error)
+        } else {
             await prisma.user.update({
                 where: { email: session.user.email },
                 data: {
