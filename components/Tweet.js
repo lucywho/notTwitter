@@ -1,5 +1,6 @@
 import Image from "next/image"
 import timeago from "lib/timeago"
+import Link from "next/link"
 
 export default function Tweet({ tweet }) {
     if (!tweet.author.name) {
@@ -26,10 +27,12 @@ export default function Tweet({ tweet }) {
                 </p>
                 <div className="container">
                     <div className="flex flex-row items-center">
-                        <p className=" mr-2">
-                            {tweet.author.name}
-                            {": "}
-                        </p>
+                        <Link href={`/${tweet.author.name}`}>
+                            <p className=" mr-2 hover:underline active:text-blue-500">
+                                {tweet.author.name}
+                                {": "}
+                            </p>
+                        </Link>
                         <p className="mr-2 text-gray-700 hover:underline">
                             {timeago.format(new Date(tweet.createdAt))}
                         </p>
