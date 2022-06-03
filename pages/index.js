@@ -1,5 +1,6 @@
 import { useSession } from "next-auth/react"
 import { useRouter } from "next/router"
+import Link from "next/link"
 
 export default function Home() {
     const { data: session, status } = useSession()
@@ -13,5 +14,5 @@ export default function Home() {
         router.push("/home")
     }
 
-    return <a href="/api/auth/signin">login</a>
+    return <Link href="/api/auth/signin">login</Link>
 }

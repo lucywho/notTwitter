@@ -6,13 +6,25 @@ export default async function handler(req, res) {
     if (!session) return res.end()
 
     if (req.method === "POST") {
-        await prisma.user.update({
-            where: { email: session.user.email },
-            data: {
+        const userExists = await prisma.user.findMany({
+            where: {
                 name: req.body.name,
             },
         })
 
-        res.end()
+        if (userExists.length) {
+            return res.status(409).json
+        }
+
+        if (!userExists.length) {
+            await prisma.user.update({
+                where: { email: session.user.email },
+                data: {
+                    name: req.body.name,
+                },
+            })
+
+            res.end()
+        }
     }
 }
