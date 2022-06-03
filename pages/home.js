@@ -24,6 +24,7 @@ export default function Home({ tweets }) {
     return (
         <>
             <NewTweet />
+
             <Tweets tweets={tweets} />
         </>
     )

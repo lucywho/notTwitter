@@ -12,8 +12,6 @@ export default async function handler(req, res) {
             },
         })
 
-        console.log("userExists: ", userExists)
-
         if (userExists.length) {
             let error = "user exists"
             return res.status(409).json(error)

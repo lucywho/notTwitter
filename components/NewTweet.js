@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useRouter } from "next/router"
 import { useSession } from "next-auth/react"
+import SignOut from "./SignOut"
 
 export default function NewTweet() {
     const [content, setContent] = useState("")
@@ -15,8 +16,9 @@ export default function NewTweet() {
                 e.preventDefault()
 
                 if (!content) {
-                    alert("No content")
-                    return
+                    let error = "no content"
+
+                    return <p>{error}</p>
                 }
                 await fetch("/api/tweet", {
                     body: JSON.stringify({
@@ -42,12 +44,12 @@ export default function NewTweet() {
                     />
                 </div>
             </div>
-
             <div className="flex">
-                <div className="flex-1 m-10 mt-5">
+                <div className="flex-1 m-10 mt-5 mr-10">
                     <button className="border float-right px-8 py-2 mt-0 mr-2 font-bold rounded-full bg-blue-900 text-white border-blue-900 hover:bg-fuchsia-700 hover:border-fuchsia-700">
                         Tweet
                     </button>
+                    <SignOut />
                 </div>
             </div>
         </form>
