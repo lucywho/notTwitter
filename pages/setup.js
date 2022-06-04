@@ -49,7 +49,11 @@ export default function Setup() {
                     onChange={(e) => setName(e.target.value)}
                     className="border p-1"
                 />
-                {nameExists && <p>Username already in use</p>}
+                {nameExists && (
+                    <p>
+                        The name {name} is already in use, please choose another
+                    </p>
+                )}
             </div>
 
             <button className="border float-left px-8 py-2 mt-5 mr-10 font-bold rounded-full bg-blue-900 text-white border-blue-900 hover:bg-fuchsia-700 hover:border-fuchsia-700">
