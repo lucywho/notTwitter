@@ -33,9 +33,11 @@ export default function Tweet({ tweet }) {
                                 {": "}
                             </p>
                         </Link>
-                        <p className="mr-2 text-gray-700 hover:underline">
-                            {timeago.format(new Date(tweet.createdAt))}
-                        </p>
+                        <Link href={`/${tweet.author.name}/status/${tweet.id}`}>
+                            <p className="mr-2 text-gray-700 hover:underline">
+                                {timeago.format(new Date(tweet.createdAt))}
+                            </p>
+                        </Link>
                     </div>
                     <p className="font-bold">{tweet.content}</p>
                 </div>
