@@ -1,8 +1,8 @@
 import prisma from "lib/prisma"
 import { getUserTweets } from "lib/data"
-import Link from "next/link"
 
 import Tweets from "components/Tweets"
+import GoHome from "components/GoHome"
 
 export default function UserProfile({ name, tweets }) {
     let tweeted = tweets.length > 0
@@ -24,11 +24,7 @@ export default function UserProfile({ name, tweets }) {
                 </>
             )}
 
-            <Link href="/home">
-                <button className="border float-right px-8 py-2 mt-5 mr-10 font-bold rounded-full bg-blue-900 text-white border-blue-900 hover:bg-fuchsia-700 hover:border-fuchsia-700">
-                    Home
-                </button>
-            </Link>
+            <GoHome />
         </>
     )
 }
