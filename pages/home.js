@@ -11,7 +11,7 @@ export default function Home({ tweets }) {
     const router = useRouter()
 
     if (loading) {
-        return null
+        return <p className="text-xl text-blue-900 pt-10 pl-10">...loading</p>
     }
 
     if (!session) {

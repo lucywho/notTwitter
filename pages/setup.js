@@ -10,7 +10,8 @@ export default function Setup() {
     const [nameExists, setNameExists] = useState(false)
 
     if (!session || !session.user) return null
-    if (loading) return null
+    if (loading)
+        return <p className="text-xl text-blue-900 pt-10 pl-10">...loading</p>
 
     if (!loading && session.user.name && !nameExists) {
         router.push("/home")
