@@ -11,12 +11,17 @@ export default function SingleTweet({ tweet, replies }) {
     const { data: session, status } = useSession()
     const router = useRouter()
 
+    if (typeof window !== "undefined" && tweet.parent) {
+        router.push(`/${tweet.author.name}/status/${tweet.parent}`)
+    }
+
     return (
         <div className="pt-10">
             <Tweet tweet={tweet} />
             <NewReply tweet={tweet} />
-            <Tweets tweets={replies} />
-
+            <div className="ml-10 border-l-blue-300 border-l-2 ">
+                <Tweets tweets={replies} nolink={true} />
+            </div>
             {session && session.user.email === tweet.author.email && (
                 <button
                     className="float-left mt-5 ml-10 px-8 py-2 font-bold rounded-full hover:bg-blue-300

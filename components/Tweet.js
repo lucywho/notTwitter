@@ -2,7 +2,7 @@ import Image from "next/image"
 import timeago from "lib/timeago"
 import Link from "next/link"
 
-export default function Tweet({ tweet }) {
+export default function Tweet({ tweet, nolink }) {
     if (!tweet.author.name) {
         tweet.author.name = "anonymous"
     }
@@ -33,11 +33,19 @@ export default function Tweet({ tweet }) {
                                 {": "}
                             </p>
                         </Link>
-                        <Link href={`/${tweet.author.name}/status/${tweet.id}`}>
-                            <p className="mr-2 text-gray-700 hover:underline">
+                        {nolink ? (
+                            <span>
                                 {timeago.format(new Date(tweet.createdAt))}
-                            </p>
-                        </Link>
+                            </span>
+                        ) : (
+                            <Link
+                                href={`/${tweet.author.name}/status/${tweet.id}`}
+                            >
+                                <p className="mr-2 text-gray-700 hover:underline">
+                                    {timeago.format(new Date(tweet.createdAt))}
+                                </p>
+                            </Link>
+                        )}
                     </div>
                     <p className="font-bold">{tweet.content}</p>
                 </div>

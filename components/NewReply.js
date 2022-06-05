@@ -39,7 +39,7 @@ export default function NewReply({ tweet }) {
                 placeholder="Tweet your reply"
                 onChange={(e) => setReply(e.target.value)}
             />
-            <button className="ml-5 px-3 py-2 font-bold rounded-full bg-blue-900 text-white border-blue-900 hover:bg-fuchsia-700 hover:border-fuchsia-700">
+            <button className="ml-5 px-4  font-bold text-xs rounded-full hover:bg-blue-900 text-white hover:border-blue-900 bg-fuchsia-700 border-fuchsia-700">
                 Reply
             </button>
         </form>
