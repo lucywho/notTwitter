@@ -47,7 +47,7 @@ export default function NewTweet() {
             <div className="flex">
                 <div className="flex-1 m-10 mt-5 mr-10">
                     <button className="border float-right px-8 py-2 mt-0 mr-2 font-bold rounded-full bg-blue-900 text-white border-blue-900 hover:bg-fuchsia-700 hover:border-fuchsia-700">
-                        Tweet
+                        notTweet
                     </button>
                     <SignOut />
                 </div>

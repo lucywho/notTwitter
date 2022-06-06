@@ -42,7 +42,7 @@ export default function Setup() {
             }}
         >
             <div className="flex-1 mb-5">
-                <div className="flex-1 mb-5">Username</div>
+                <div className="flex-1 mb-5">Choose a username</div>
                 <input
                     type="text"
                     name="name"
@@ -52,7 +52,8 @@ export default function Setup() {
                 />
                 {nameExists && (
                     <p>
-                        The name {name} is already in use, please choose another
+                        The name <span className="text-blue-900">{name}</span>{" "}
+                        is already in use, please choose another
                     </p>
                 )}
             </div>
