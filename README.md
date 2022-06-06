@@ -19,6 +19,4 @@ From a [tutorial(https://github.com/flaviocopes/bootcamp-2022-week-9-twitter-clo
 ![image](public/notTwitterWelcome.png)
 ![image](public/notTwitter.png)
 
-<img src="public/notTwitterWelcome.png" width="200")
-
 
