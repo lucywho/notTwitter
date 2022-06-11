@@ -34,7 +34,7 @@ export default function Setup() {
 
                 session.user.name = name
 
-                if (userName.ok) {
+                if (userName) {
                     setNameExists(false)
                     router.push("/home")
                 }

@@ -35,6 +35,8 @@ export default function UserProfile({ name, tweets }) {
 export async function getServerSideProps({ params }) {
     let tweets = await getUserTweets(params.name, prisma)
     tweets = JSON.parse(JSON.stringify(tweets))
+
+    console.log(params.name)
     return {
         props: {
             name: params.name,

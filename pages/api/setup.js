@@ -3,9 +3,12 @@ import { getSession } from "next-auth/react"
 
 export default async function handler(req, res) {
     const session = await getSession({ req })
+
     if (!session) return res.end()
 
     if (req.method === "POST") {
+        console.log("req.body in setup at start: ", req.body)
+
         const userExists = await prisma.user.findMany({
             where: {
                 name: req.body.name,
@@ -22,6 +25,7 @@ export default async function handler(req, res) {
                     name: req.body.name,
                 },
             })
+            console.log("session in setup at end: ", session)
 
             res.end()
         }
