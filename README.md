@@ -1,6 +1,6 @@
 ## Twitter clone
 
-From a [tutorial(https://github.com/flaviocopes/bootcamp-2022-week-9-twitter-clone)] by [Flavio Copes (https://github.com/flaviocopes)]
+From a [tutorial](https://github.com/flaviocopes/bootcamp-2022-week-9-twitter-clone) by [Flavio Copes](https://github.com/flaviocopes)
 
 ## Personal additions
 
@@ -14,7 +14,7 @@ From a [tutorial(https://github.com/flaviocopes/bootcamp-2022-week-9-twitter-clo
 
 ## Notes
 
--   development version: new registration not currently possible (verification emails are being handled by [Mailtrap.io(https://mailtrap.io)])
+-   development version: new registration not currently possible (verification emails are being handled by [Mailtrap.io](https://mailtrap.io))
 
 ![image](public/notTwitterWelcome.png)
 ![image](public/notTwitter.png)
