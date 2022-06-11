@@ -1,8 +1,8 @@
-## Twitter clone
+## notTwitter Twitter clone
 
 From a [tutorial](https://github.com/flaviocopes/bootcamp-2022-week-9-twitter-clone) by [Flavio Copes](https://github.com/flaviocopes)
 
-## Personal additions
+### Personal additions
 
 -   displays default image where none is stored in database
 -   displays default username ("anonymous") where none is stored in database
