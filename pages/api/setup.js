@@ -1,5 +1,6 @@
 import prisma from "lib/prisma"
 import { getSession } from "next-auth/react"
+const logger = require("pino")()
 
 export default async function handler(req, res) {
     const session = await getSession({ req })
@@ -17,7 +18,7 @@ export default async function handler(req, res) {
             let error = "user exists"
             return res.status(409).json(error)
         } else {
-            console.log("email exists?: ", session.user.email)
+            logger.info({ email: session.user.email })
             try {
                 await prisma.user.update({
                     where: { email: session.user.email },
