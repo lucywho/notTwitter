@@ -12,10 +12,6 @@ From a [tutorial](https://github.com/flaviocopes/bootcamp-2022-week-9-twitter-cl
 -   sign out option on home page
 -   styling
 
-## Notes
-
--   development version: new registration not currently possible (verification emails are being handled by [Mailtrap.io](https://mailtrap.io))
-
 ![image](public/notTwitterWelcome.png)
 ![image](public/notTwitter.png)
 
