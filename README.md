@@ -1,8 +1,8 @@
-## Twitter clone
+## notTwitter Twitter clone
 
 From a [tutorial](https://github.com/flaviocopes/bootcamp-2022-week-9-twitter-clone) by [Flavio Copes](https://github.com/flaviocopes)
 
-## Personal additions
+### Personal additions
 
 -   displays default image where none is stored in database
 -   displays default username ("anonymous") where none is stored in database
@@ -11,10 +11,6 @@ From a [tutorial](https://github.com/flaviocopes/bootcamp-2022-week-9-twitter-cl
 -   return home button on all other pages
 -   sign out option on home page
 -   styling
-
-## Notes
-
--   development version: new registration not currently possible (verification emails are being handled by [Mailtrap.io](https://mailtrap.io))
 
 ![image](public/notTwitterWelcome.png)
 ![image](public/notTwitter.png)
