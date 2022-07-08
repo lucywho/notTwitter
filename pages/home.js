@@ -19,10 +19,12 @@ export default function Home({ initialTweets }) {
 
     if (!session) {
         router.push("/")
+        return null
     }
 
     if (session && !session.user.name) {
         router.push("/setup")
+        return null
     }
     return (
         <>

@@ -15,6 +15,7 @@ export default function Welcome({ tweets }) {
 
     if (session) {
         router.push("/home")
+        return null
     }
 
     return (
