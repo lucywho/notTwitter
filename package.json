@@ -13,13 +13,13 @@
         "@faker-js/faker": "^7.1.0",
         "@next-auth/prisma-adapter": "^1.0.3",
         "javascript-time-ago": "^2.5.4",
-        "next": "14.2.16",
-        "next-auth": "^4.24.5",
+        "next": "14.2.22",
+        "next-auth": "^4.24.11",
         "nodemailer": "^6.9.9",
         "pg": "^8.7.3",
         "pino": "^8.0.0",
-        "react": "18.1.0",
-        "react-dom": "18.1.0"
+        "react": "^18.3.1",
+        "react-dom": "^18.3.1"
     },
     "devDependencies": {
         "autoprefixer": "^10.4.7",
